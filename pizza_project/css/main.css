@@ -1,0 +1,74 @@
+/* assign background color to <body> element */
+body{
+  background-color: cornsilk;
+}
+
+/* Assign a font family to all <h1>elements. */
+/* Assign a color to all <h1>elements */
+h1  {
+  font-family: futura;
+  color: seagreen;
+}
+
+/* Assign a font family to all <h3 >elements. */
+/* Assign a color to all <h3> elements. */
+h3  {
+  font-family: futura;
+  color: seagreen;
+}
+
+/* Assign a font family to all <div >elements. */
+/* Assign a color to all <div> elements. */
+div {
+  font-family: futura;
+  color: cornflowerblue;
+}
+
+#menu-bg  {
+  width: 600px;
+  height: 470px;
+  margin: 10px auto;
+}
+
+#frm-menu {
+  width: 600px;
+  height: 200px;
+}
+#total-price  {
+  width: 200px;
+  height: 190px;
+  margin: 0 auto;
+  float: right;
+}
+
+.menu-left {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+.menu-right  {
+  width: 200px;
+  height: 200px;
+  float: right;
+}
+
+#show-text  {
+  width: 200px;
+  height: 190px;
+  margin: 0px auto;
+  float: left
+}
+
+#cart {
+  top: 0;
+  margin: 0px auto;
+  width: 400px;
+  height: 200px;
+}
+
+#btn-order  {
+  margin: 10px 0px 0px 100px;
+  width: 100px;
+  height: 40px;
+}
