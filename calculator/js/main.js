@@ -6,6 +6,7 @@ const calculator = {
   operator: null,
 }
 
+// handles control of digit entry
 function inputDigit(digit)  {
   const { displayValue, checkSecondOperand } = calculator
   if (checkSecondOperand === true)  {
@@ -17,6 +18,7 @@ function inputDigit(digit)  {
   }
 }
 
+// handles control of decimal point
 function inputDecimal(decimal)  {
   if (calculator.checkSecondOperand === true) return;
   if (!calculator.displayValue.includes(decimal)) {
@@ -24,6 +26,7 @@ function inputDecimal(decimal)  {
   }
 }
 
+// operator logic
 function handleOperator(nextOperator) {
   const { firstOperand, displayValue, operator } = calculator;
   const inputValue = parseFloat(displayValue);
@@ -45,6 +48,7 @@ function handleOperator(nextOperator) {
   calculator.operator = nextOperator;
 }
 
+// operation lookup
 const performCalc = {
   '/': (firstOperand, secondOperand) => firstOperand / secondOperand,
   '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
@@ -53,6 +57,7 @@ const performCalc = {
   '=': (firstOperand, secondOperand) => secondOperand
 };
 
+// resets calculator
 function reset()  {
   calculator.displayValue = '0';
   calculator.firstOperand = null;
@@ -60,12 +65,14 @@ function reset()  {
   calculator.operator = null;
 }
 
+// updates display as numbers are entered / calculations performed
 function updateDisplay() {
   const display = document.querySelector('.calculator-screen');
   display.value = calculator.displayValue;
 }
 updateDisplay();
 
+// manages button interaction logic
 const calcKeys = document.querySelector('.keys');
 calcKeys.addEventListener('click', (event) => {
   const { target } = event;
@@ -77,6 +84,7 @@ calcKeys.addEventListener('click', (event) => {
     updateDisplay();
     return;
   }
+  // Added below to include 'equal sign' operation
   if (target.classList.contains('equal')) {
     handleOperator(target.value);
     updateDisplay();
