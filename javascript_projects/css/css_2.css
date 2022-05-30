@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body  {
+  font-family: futura;
+  color: seagreen;
+}
+
+input {
+  width: 100%;
+
+}
+
+.form-container  {
+  border: 2px solid seagreen;
+  position: absolute;
+  width: 20%;
+  left: 40%;
+  padding: 10px;
+  align-items: center;
+}
+

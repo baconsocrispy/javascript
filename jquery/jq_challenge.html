@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <a href="https://www.google.com" id="link">link</a>
+  <button>Show Link</button>
+  <script>
+    // hides anchor tag
+    $('a').hide();
+
+    // reveals anchor tag on button click
+    $('button').click(function() {
+      $('a').show();
+    });
+  </script>
+</body>
+</html>
