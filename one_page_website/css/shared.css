@@ -148,7 +148,7 @@ section {
 /* HOME SECTION STYLES */
 
 #home {
-  background: url('../images/home.jpg') no-repeat 50% 50%;
+  background: url('../img/home.jpg') no-repeat 50% 50%;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -412,11 +412,11 @@ section {
 
 .modal-content  {
   position: relative;
-  background-color: #fefefe;
+  background-color: black;
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .close  {
