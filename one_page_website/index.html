@@ -49,10 +49,9 @@
         <div class="flex-container">
 
           <!-- PHOTO CONTAINER 1 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(1)">
             <div class="photo">
-              <img src="./images/thumb/1_arrowhead.jpeg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(1)">
+              <img src="./img/thumb/1.jpg" alt="Arrowhead">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Arrowhead</p>
@@ -62,10 +61,9 @@
           <!-- END PHOTO CONTAINER 1 -->
 
           <!-- PHOTO CONTAINER 2 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(2)">
             <div class="photo">
-              <img src="./images/thumb/2_arrow-wood.jpg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(2)">
+              <img src="./img/thumb/2.jpg" alt="Arrow-Wood">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Arrow-Wood</p>
@@ -75,10 +73,9 @@
           <!-- END PHOTO CONTAINER 2 -->
 
           <!-- PHOTO CONTAINER 3 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(3)">
             <div class="photo">
-              <img src="./images/thumb/3_asparagus.jpg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(3)">
+              <img src="./img/thumb/3.jpg" alt="Asparagus">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Asparagus</p>
@@ -88,10 +85,9 @@
           <!-- END PHOTO CONTAINER 3 -->
 
           <!-- PHOTO CONTAINER 4 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(4)">
             <div class="photo">
-              <img src="./images/thumb/4_basswood.jpeg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(4)">
+              <img src="./img/thumb/4.jpg" alt="Basswood">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Basswood</p>
@@ -101,10 +97,9 @@
           <!-- END PHOTO CONTAINER 4 -->
 
           <!-- PHOTO CONTAINER 5 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(5)">
             <div class="photo">
-              <img src="./images/thumb/5_bellwort.jpg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(5)">
+              <img src="./img/thumb/5.jpg" alt="Bellwort">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Bellwort</p>
@@ -114,10 +109,9 @@
           <!-- END PHOTO CONTAINER 5 -->
 
           <!-- PHOTO CONTAINER 6 -->
-          <div class="photo-container">
+          <div class="photo-container"  onclick="openModal(); currentSlide(6)">
             <div class="photo">
-              <img src="./images/thumb/6_bergamot.jpg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(6)">
+              <img src="./img/thumb/6.jpg" alt="Bergamot">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Bergamot</p>
@@ -127,10 +121,9 @@
           <!-- END PHOTO CONTAINER 6 -->
 
           <!-- PHOTO CONTAINER 7 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(7)">
             <div class="photo">
-              <img src="./images/thumb/7_birch.jpg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(7)">
+              <img src="./img/thumb/7.jpg" alt="Birch">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Birch</p>
@@ -140,10 +133,9 @@
           <!-- END PHOTO CONTAINER 7 -->
 
           <!-- PHOTO CONTAINER 8 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(8)">
             <div class="photo">
-              <img src="./images/thumb/8_black-alder.jpeg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(8)">
+              <img src="./img/thumb/8.jpg" alt="Black-Alder">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Black Alder</p>
@@ -153,10 +145,9 @@
           <!-- END PHOTO CONTAINER 8 -->
 
           <!-- PHOTO CONTAINER 9 -->
-          <div class="photo-container">
+          <div class="photo-container" onclick="openModal(); currentSlide(9)">
             <div class="photo">
-              <img src="./images/thumb/9_balsam.jpeg" alt="" 
-                class="hover-shadow" onclick="openModal(); currentSlide(9)">
+              <img src="./img/thumb/9.png" alt="Balsam">
               <div class="photo-overlay">
                 <h3>Click To Enlarge</h3>
                 <p>Balsam</p>
@@ -169,60 +160,67 @@
 
         <!-- MODAL LIGHT BOX -->
         <div class="modal" id="myModal">
-          <span class="close-cursor" onclick="closeModal()">&times;</span>
+
+          <!-- creates the closing 'X' at top right -->
+          <!-- can't get entire div to be clickable -->
+          <div class="close" onclick="closeModal()">
+            <span class="fill-div">&times;</span>
+          </div>
+
+          <!-- these are the larger pictures -->
           <div class="modal-content">
 
             <!-- slide 1 -->
             <div class="mySlides">
               <div class="numbertext">1 / 9</div>
-              <img src="./images/thumb/1_arrowhead.jpeg" style="width: 100%">
+              <img src="./img/1.jpeg" style="width: 100%;">
             </div>
 
             <!-- slide 2 -->
             <div class="mySlides">
               <div class="numbertext">2 / 9</div>
-              <img src="./images/thumb/2_arrow-wood.jpg" style="width: 100%">
+              <img src="./img/2.jpg" style="width: 100%">
             </div>
 
             <!-- slide 3 -->
             <div class="mySlides">
               <div class="numbertext">3 / 9</div>
-              <img src="./images/thumb/3_asparagus.jpg" style="width: 100%">
+              <img src="./img/3.jpg" style="width: 100%">
             </div>
 
             <!-- slide 4 -->
             <div class="mySlides">
               <div class="numbertext">4 / 9</div>
-              <img src="./images/thumb/4_basswood.jpeg" style="width: 100%">
+              <img src="./img/4.jpg" style="width: 100%">
             </div>
 
             <!-- slide 5 -->
             <div class="mySlides">
               <div class="numbertext">5 / 9</div>
-              <img src="./images/thumb/5_bellwort.jpg" style="width: 100%">
+              <img src="./img/5.jpg" style="width: 100%">
             </div>
 
             <!-- slide 6 -->
             <div class="mySlides">
               <div class="numbertext">6 / 9</div>
-              <img src="./images/thumb/6_bergamot.jpg" style="width: 100%">
+              <img src="./img/6.jpg" style="width: 100%">
             </div>
 
             <!-- slide 7 -->
             <div class="mySlides">
               <div class="numbertext">7 / 9</div>
-              <img src="./images/thumb/7_birch.jpg" style="width: 100%">
+              <img src="./img/7.webp" style="width: 100%">
             </div>
 
             <!-- slide 8 --><div class="mySlides">
               <div class="numbertext">8 / 9</div>
-              <img src="./images/thumb/8_black-alder.jpeg" style="width: 100%">
+              <img src="./img/8.jpg" style="width: 100%">
             </div>
 
             <!-- slide 9 -->
             <div class="mySlides">
               <div class="numbertext">9 / 9</div>
-              <img src="./images/thumb/9_balsam.jpeg" style="width: 100%">
+              <img src="./img/9.jpg" style="width: 100%">
             </div>
             
             <!-- next / prev controls -->
@@ -237,48 +235,56 @@
             <!-- thumbnail controls -->
             <!-- thumb 1 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/1_arrowhead.jpeg" 
+              <img class="demo" src="./img/thumb/1.jpg" 
                 onclick="currentSlide(1)" alt="">
             </div>
 
             <!-- thumb 2 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/2_arrow-wood.jpg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/2.jpg" 
+                onclick="currentSlide(2)" alt="">
             </div>
 
             <!-- thumb 3 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/3_asparagus.jpg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/3.jpg" 
+                onclick="currentSlide(3)" alt="">
             </div>
 
             <!-- thumb 4 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/4_basswood.jpeg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/4.jpg" 
+                onclick="currentSlide(4)" alt="">
             </div>
 
             <!-- thumb 5 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/5_bellwort.jpg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/5.jpg" 
+                onclick="currentSlide(5)" alt="">
             </div>
 
             <!-- thumb 6 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/6_bergamot.jpg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/6.jpg" 
+                onclick="currentSlide(6)" alt="">
             </div>
 
             <!-- thumb 7 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/7_birch.jpg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/7.jpg" 
+                onclick="currentSlide(7)" alt="">
             </div>
 
             <!-- thumb 8 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/8_black-alder.jpeg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/8.jpg" 
+                onclick="currentSlide(8)" alt="">
             </div>
 
             <!-- thumb 9 -->
             <div class="column">
-              <img class="demo" src="./images/thumb/9_balsam.jpeg" onclick="currentSlide(1)" alt="">
+              <img class="demo" src="./img/thumb/9.png" 
+                onclick="currentSlide(9)" alt="">
             </div>
 
 

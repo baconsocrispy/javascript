@@ -381,11 +381,20 @@ section {
 }
 
 /* Modal lightbox styling */
+.row > .column  {
+  padding: 0 8px;
+}
+
+.row:after  {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .column {
   padding: 0 8px;
   float: left;
-  width: 25%;
+  /* width: 5%; */
 }
 
 .modal  {
@@ -407,7 +416,7 @@ section {
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1200px;
+  max-width: 700px;
 }
 
 .close  {
@@ -417,6 +426,11 @@ section {
   right: 25px;
   font-size: 35px;
   font-weight: bold;
+}
+.fill-div {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .close:hover,
@@ -474,11 +488,13 @@ section {
 
 img.demo  {
   opacity: 0.6;
+  width: 60px;
 }
 
 .active,
 .demo:hover {
   opacity: 1;;
+  cursor: pointer;
 }
 
 img.hover-shadow  {
