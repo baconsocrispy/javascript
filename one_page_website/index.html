@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Wild Plants</title>
+    <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <div class="wrap">
+      <div class="menu-container">
+        <ul class="menu">
+          <a href="#home"><li>HOME</li></a>
+          <a href="#gallery"><li>PLANTS</li></a>
+          <a href="#contact"><li>CONTACT</li></a>
+        </ul>
+      </div>
+    </div>
+    <!-- END NAV -->
+   
+    <!-- HOME -->
+    <div id="home">
+      <div class="container">
+        <div class="text-center">
+          <span class="head-main">
+            Field Guide To Edible & Useful 
+            Wild Plants of North America
+          </span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-center">
+          <span class="head-sub-main">
+            A guide to help you in using, locating,
+            and enjoying the plant life that Mother
+            Nature has so generously supplied.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- END HOME -->
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="container">
+        <h1>Wild Plants</h1>
+        <div class="flex-container">
+
+          <!-- PHOTO CONTAINER 1 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/1_arrowhead.jpeg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(1)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Arrowhead</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 1 -->
+
+          <!-- PHOTO CONTAINER 2 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/2_arrow-wood.jpg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(2)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Arrow-Wood</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 2 -->
+
+          <!-- PHOTO CONTAINER 3 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/3_asparagus.jpg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(3)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Asparagus</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 3 -->
+
+          <!-- PHOTO CONTAINER 4 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/4_basswood.jpeg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(4)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Basswood</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 4 -->
+
+          <!-- PHOTO CONTAINER 5 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/5_bellwort.jpg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(5)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Bellwort</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 5 -->
+
+          <!-- PHOTO CONTAINER 6 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/6_bergamot.jpg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(6)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Bergamot</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 6 -->
+
+          <!-- PHOTO CONTAINER 7 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/7_birch.jpg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(7)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Birch</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 7 -->
+
+          <!-- PHOTO CONTAINER 8 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/8_black-alder.jpeg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(8)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Black Alder</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 8 -->
+
+          <!-- PHOTO CONTAINER 9 -->
+          <div class="photo-container">
+            <div class="photo">
+              <img src="./images/thumb/9_balsam.jpeg" alt="" 
+                class="hover-shadow" onclick="openModal(); currentSlide(9)">
+              <div class="photo-overlay">
+                <h3>Click To Enlarge</h3>
+                <p>Balsam</p>
+              </div>
+            </div>
+          </div>
+          <!-- END PHOTO CONTAINER 9 -->
+
+        </div>
+
+        <!-- MODAL LIGHT BOX -->
+        <div class="modal" id="myModal">
+          <span class="close-cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+
+            <!-- slide 1 -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 9</div>
+              <img src="./images/thumb/1_arrowhead.jpeg" style="width: 100%">
+            </div>
+
+            <!-- slide 2 -->
+            <div class="mySlides">
+              <div class="numbertext">2 / 9</div>
+              <img src="./images/thumb/2_arrow-wood.jpg" style="width: 100%">
+            </div>
+
+            <!-- slide 3 -->
+            <div class="mySlides">
+              <div class="numbertext">3 / 9</div>
+              <img src="./images/thumb/3_asparagus.jpg" style="width: 100%">
+            </div>
+
+            <!-- slide 4 -->
+            <div class="mySlides">
+              <div class="numbertext">4 / 9</div>
+              <img src="./images/thumb/4_basswood.jpeg" style="width: 100%">
+            </div>
+
+            <!-- slide 5 -->
+            <div class="mySlides">
+              <div class="numbertext">5 / 9</div>
+              <img src="./images/thumb/5_bellwort.jpg" style="width: 100%">
+            </div>
+
+            <!-- slide 6 -->
+            <div class="mySlides">
+              <div class="numbertext">6 / 9</div>
+              <img src="./images/thumb/6_bergamot.jpg" style="width: 100%">
+            </div>
+
+            <!-- slide 7 -->
+            <div class="mySlides">
+              <div class="numbertext">7 / 9</div>
+              <img src="./images/thumb/7_birch.jpg" style="width: 100%">
+            </div>
+
+            <!-- slide 8 --><div class="mySlides">
+              <div class="numbertext">8 / 9</div>
+              <img src="./images/thumb/8_black-alder.jpeg" style="width: 100%">
+            </div>
+
+            <!-- slide 9 -->
+            <div class="mySlides">
+              <div class="numbertext">9 / 9</div>
+              <img src="./images/thumb/9_balsam.jpeg" style="width: 100%">
+            </div>
+            
+            <!-- next / prev controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- caption text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- thumbnail controls -->
+            <!-- thumb 1 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/1_arrowhead.jpeg" 
+                onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 2 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/2_arrow-wood.jpg" onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 3 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/3_asparagus.jpg" onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 4 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/4_basswood.jpeg" onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 5 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/5_bellwort.jpg" onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 6 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/6_bergamot.jpg" onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 7 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/7_birch.jpg" onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 8 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/8_black-alder.jpeg" onclick="currentSlide(1)" alt="">
+            </div>
+
+            <!-- thumb 9 -->
+            <div class="column">
+              <img class="demo" src="./images/thumb/9_balsam.jpeg" onclick="currentSlide(1)" alt="">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END GALLERY -->
+
+    <!-- RSVP -->
+    <section id="contact">
+      <div class="container">
+        <div class="heading-padding">
+          <h1 class="heading-padding">CONTACT</h1>
+          <div class="reservations">
+            <h2><span>
+                  Learn about other edible plants
+                </span>
+              <br/>Join the mailing list
+            </h2>
+            <p>
+              Please provide your contact info.
+            </p>
+            <div class="form-rsvp">
+              <form action="" method="POST">
+                <input class="rsvp" type="text" value="" placeholder="First Name">
+                <input class="rsvp" type="text" value="" placeholder="Last Name">
+                <input class="rsvp" type="text" value="" placeholder="Email">
+                <input class="rsvp" type="text" value="" placeholder="Phone Number">
+                <div class="form-spacer">
+                  <label class="terms">Terms and Conditions</label>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Submit">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END RSVP -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+      www.plantwebsite.com &nbsp; &nbsp; &copy; 2022
+    </div>
+    <!-- END FOOTER -->
+  </body>
+</html>
