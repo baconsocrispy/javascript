@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>React 1</title>
+    <script src="./react.js"></script>
+    <script src="./react-dom.js"></script>
+  </head>
+  <body>
+    <div id="react-code">
+      <script>
+        var counter = React.createClass({
+          render: function()  {
+            var time_passed = Math.round(this.props.time_passed / 100);
+            var seconds_passed = time_passed / 10 + (time_passed % 10 ? '' : '.0');
+            var text = 'My React code started running ' + seconds_passed +
+            ' seconds ago';
+            return React.DOM.p(null, text);
+          }
+        });
+
+        var counter_factory = React.createFactory(counter);
+
+        var start_counting = new Date().getTime();
+        setInterval (function() {
+          ReactDOM.render(
+            counter_factory({time_passed: new Date().getTime() - start_counting}),
+            document.getElementById('react-code')
+          );
+        }, 50)
+      </script>
+    </div>
+  </body>
+</html>
