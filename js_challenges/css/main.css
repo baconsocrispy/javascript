@@ -1,0 +1,149 @@
+/* smooth-scrolling */ 
+html  {
+  scroll-behavior: smooth;
+}
+
+/* fadeout challenge */
+body  {
+margin: 0;
+opacity: 1;
+transition: 1s opacity;
+}
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+/* page layout */
+h1  {
+  color: cornsilk;
+  font-size: 5vw;
+}
+
+.large-section {
+  width: 100%;
+  height: 2000px;
+  background-color: black;
+  margin: 0;
+  top: 0;
+}
+
+#link1  {
+  background-color: red;
+}
+#link2  {
+  background-color: brown;
+}
+#link3  {
+  background-color: teal;
+}
+
+/* animate an element */
+@keyframes move-pizza {
+  from {top: -100px;}
+  to {top: 400px;}
+}
+.pizza-box {
+  width: 100%;
+}
+#pizza {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 400px;
+  transform: translate(-50%, -50%);
+  animation: move-pizza 5s ease-in;
+  z-index: 100;
+}
+
+/* sticky contact button w/popup */
+.contact {
+  position: sticky;
+  width: 100%;
+  height: 40px;
+  bottom: 0px;
+  background-color: black;
+}
+#sticky-contact-btn {
+  position:absolute;
+  background-color: seagreen;
+  border: 2px solid darkgreen;
+  font-family: futura;
+  right: 0px;
+  color: cornsilk;
+  cursor: pointer;
+}
+#sticky-contact-btn:hover {
+  background-color: darkgreen;
+}
+
+/* popup form styling */
+.popup-form {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border: 3px solid seagreen;
+  z-index: 9;
+}
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: cornsilk;
+}
+.form-container input[type=text] {
+ width: 100%;
+ padding: 15px;
+ margin: 5px 0 22px 0;
+ border: none;
+ background-color: cornsilk;
+}
+.form-container input[type=text]:focus {
+  background-color: lightblue;
+  outline: seagreen;
+}
+.form-container .btn  {
+  background-color: seagreen;
+  color: cornsilk;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: lightblue;
+}
+.form-container .btn:hover  {
+  opacity: 1;
+}
+
+/* automatic slideshow */
+#slideshow  {
+  margin: auto;
+  position: relative;
+  width: 250px;
+  height: 184px;
+  padding: 10px;
+}
+#slideshow > div  {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  bottom; 10px;
+}
+
+/* bookmark challenge */
+.nav-container  {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: seagreen;
+}
+
+.nav-container  a {
+  display: inline-block;
+}

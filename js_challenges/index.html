@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- fade out challenge -->
+    <script>
+      document.body.classList.add('fade-out')
+    </script>
+    
+    <!-- bookmark / smooth-scrolling challenge -->
+    <div class="nav-container">
+      <ul class="menu">
+        <a href="#link1">Link 1</a>
+        <a href="#link2">Link 2</a>
+        <a href="#link3">Link 3</a>
+      </ul>
+    </div>
+    <!-- arbitrary page content -->
+    <div class="large-section">
+
+        <h1>THIS IS THE FIRST SECTION</h1>
+
+      <!-- automatic slideshow -->
+      <div id="slideshow">
+        <div>
+          <img src="./img/1.jpg"> 
+        </div>
+        <div>
+          <img src="./img/2.jpg">
+        </div>
+        <div>
+          <img src="./img/3.jpg">
+        </div>
+      </div>
+    </div>
+
+    <!-- animate an element -->
+    <div class="pizza-box">
+      <img id="pizza" src="./img/pizza.png">
+    </div>
+
+   
+
+    <!-- create a popup contact form -->
+    <div class="popup-form" id="popup-form">
+      <form class="form-container">
+        <h1>Contact Info</h1>
+
+        <label class='form-input' for="Name">Name:</label>
+        <input type="text" placeholder="Enter Your Name" name="Name" value="">
+
+        <label class='form-input' for="email">Email:</label>
+        <input type="text" placeholder="Enter Email" name="Email" value="">
+
+        <input type="submit" class="btn" onclick="validateContact()">Submit</input>
+        <button type="button" class="btn cancel" onclick="closeContact()">Close</button>
+
+      </form>
+    </div>
+
+    <!-- arbitrary content -->
+    <div class="large-section" id="link1">
+      <h1>THIS IS THE SECOND SECTION</h1>
+    </div>
+    <div class="large-section" id="link2">
+      <h1>THIS IS THE THIRD SECTION</h1>
+    </div>
+    <div class="large-section" id="link3">
+      <h1>THIS IS THE FOURTH SECTION</h1>
+    </div>
+
+    <!-- create a sticky contact button -->
+    <div class="contact">
+      <button id="sticky-contact-btn" onclick="openContact()">Contact</button>
+    </div>
+
+    <!-- slideshow jQuery -->
+    <script>
+      $("#slideshow > div:gt(0)").hide();
+      setInterval(function() {
+        $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+      }, 3000);
+    </script>
+  </body>
+</html>
