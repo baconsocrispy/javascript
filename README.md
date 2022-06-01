@@ -4,9 +4,9 @@
 
 This repository collects the JavaScript projects I completed as part of the 'JavaScript Course' at The Tech Academy. The course is an introduction to the fundamentals of JavaScript and builds on earlier lessons in HTML and CSS.
 
-*Pizza Project
-*Tic Tac Toe
-*Calculator
+* Pizza Project
+* Tic Tac Toe
+* Calculator
 
 ## Pizza Project
 
